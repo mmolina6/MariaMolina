@@ -2,25 +2,15 @@ import java.util.ArrayList;
 
 public class LinkedDeque<T> implements DequeInterface<T> {
 
-	protected DLLNode<T> front;     // reference to the front of this queue
-	protected DLLNode<T> rear;      // reference to the rear of this queue
-	protected int numElements = 0; // number of elements in this queue
+	protected DLLNode<T> front;     
+	protected DLLNode<T> rear;      
+	protected int numElements = 0; 
 
 	public LinkedDeque() {
 		front = null;
 		rear = null;
 	}
 
-	/* Complete the definition of this LinkedDeque class by 
-	 * implementing all methods required by the interface DequeInterface. 
-	 * Eclipse can add stubs for all the required methods. 
-	 */ 
-
-
-	/* The following private method must be recursive. It traverses
-	 * the deque front to rear and builds and returns the string
-	 * consisting of deque elements. Use space or comma as a separator.
-	 */
 	private String makeString(DLLNode<T> list) {
 		String empty = " "; 
 		if (list == null) { 
@@ -34,7 +24,6 @@ public class LinkedDeque<T> implements DequeInterface<T> {
 
 	@Override
 	public String toString() {
-		// Do not modify this method.
 		return makeString(front);
 	}
 
